@@ -4,11 +4,14 @@ Have you always been bugged that you need to renew your web server in pythonanyw
 
 ## How to setup
 
-To use this, just put the .bat (if you're on windows) or the .sh file (if you're on linux or mac) to a startup program. Edit the auth.json to your username and password and you will be ready to go!
+1. Install git if you haven't already.
+2. Clone repository using `git clone https://github.com/Jerry288/pythonanywhere-web_auto_renew.git`
+3. Edit auth.json to add your credidentials
+3. Add the .bat file to startup if you're on windows and the 
 
 ## License
 
-The license can be found [here](LICENSE)
+The license can be found [here](LICENSE).
 
 If you use or remix this software, please provide proper attribution to the original creator:
 
