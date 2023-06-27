@@ -6,6 +6,7 @@ with open('auth.json', 'r') as f:
 
 username = auth['username']
 password = auth['password']
+domain = auth['pythonanywhere_domain']
 
 #We retrieve csrf token and sessionid by requesting /login
 lgnhead = requests.get("https://www.pythonanywhere.com/login/").cookies
@@ -82,6 +83,6 @@ headers = {
 
 data = f'csrfmiddlewaretoken={csrf}'
 
-response = requests.post('https://www.pythonanywhere.com/user/jlin0312/webapps/jlin0312.pythonanywhere.com/extend', headers=headers, cookies=cookies, data=data)
+response = requests.post(f'https://www.pythonanywhere.com/user/{username}/webapps/{domain}/extend', headers=headers, cookies=cookies, data=data)
 if response.status_code != 200:
     print(f'error: {str(response.status_code)}')
