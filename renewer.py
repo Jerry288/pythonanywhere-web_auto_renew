@@ -1,5 +1,16 @@
 import requests
 import json
+import urllib.request
+
+def connect(host='http://google.com'):
+    try:
+        urllib.request.urlopen(host) #Python 3.x
+        return True
+    except:
+        return False
+
+while not connect():
+    continue
 
 with open('auth.json', 'r') as f:
     auth = json.loads(f.read())
